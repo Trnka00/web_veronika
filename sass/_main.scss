@@ -1,0 +1,280 @@
+.uvod {
+  height: 100vh;
+  background-image: url('fotky/main.jpg');
+  background-size: cover;
+  background-position: right;
+  position: relative;
+
+  @media only screen and (max-width: 1150px) {
+    background-image: url('fotky/ipad.jpg');
+  }
+
+  @media only screen and (max-width: 600px) and (orientation: portrait) {
+    background-image: url('fotky/iphone_11.jpg');
+  }
+
+  @include navbarStyle();
+
+  .text-container {
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    text-align: center;
+
+    @media only screen and (max-width: 1150px) {
+      top: 20%;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
+    }
+
+    @media only screen and (max-width: 600px) {
+      top: 16%;
+    }
+
+    .heading {
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: $color-main;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    .info {
+      padding-top: 3rem;
+      font-size: 3rem;
+    }
+
+    .action-btn {
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      margin-top: 4rem;
+      font-size: 3rem;
+      background-color: transparent;
+      font-weight: bold;
+      color: $color-main;
+      border: 0.3rem solid $color-main;
+      transition: all 0.2s;
+      text-decoration: none;
+      &:hover {
+        cursor: pointer;
+        outline: none;
+        background-color: $color-main;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.about {
+  height: 100%;
+  width: 75%;
+  max-width: 1235px;
+  margin: 0 auto;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .citat {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    padding: 10rem 0 12rem 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.8;
+
+    color: $color-main;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 60rem;
+    // margin: 4rem auto;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+
+    @media only screen and (max-width: 900px) {
+      width: 90vw;
+      height: 50vh;
+    }
+  }
+
+  .btn-car {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: all 0.1s ease-in;
+    z-index: 3;
+  }
+  .btn-car:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .btn-car:active {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .btn-next {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .btn-previous {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .pic-container {
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .red {
+    height: 100%;
+    width: 100%;
+    background-image: url(fotky/2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+  }
+
+  .green {
+    height: 100%;
+    width: 100%;
+    background-image: url(fotky/1.jpg);
+    background-position: center;
+
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+  }
+  .blue {
+    height: 100%;
+    width: 100%;
+    background-image: url(fotky/3.jpg);
+    background-position: center;
+
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+  }
+
+  .car-caption {
+    color: $color-white;
+    width: 70%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .visible {
+    visibility: visible;
+    animation: fadein 0.5s ease-in forwards;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .funguje {
+    font-size: 3rem;
+    font-weight: 500;
+    color: $color-main;
+    padding-top: 12rem;
+  }
+  .roadmap {
+    width: 60%;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  .bubble {
+    transform: translateX(25%);
+    @media only screen and (max-width: 600px) {
+      transform: none;
+    }
+  }
+
+  .form-icon,
+  .bubble,
+  .person {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10rem;
+  }
+
+  .icon-roadmap {
+    height: 6rem;
+    padding-right: 2rem;
+  }
+
+  .icon-heading {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .icon-paragraph {
+    font-size: 1.8rem;
+    padding-top: 1.2rem;
+    color: rgb(133, 133, 133);
+  }
+  .cta-paragraph {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 12rem;
+  }
+
+  .cta-question {
+    font-size: 3rem;
+    color: $color-main;
+    font-weight: 500;
+    padding-top: 3rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    text-align: center;
+    width: 24rem;
+    margin: 3rem 0 8rem 0;
+    font-size: 3rem;
+    background-color: transparent;
+    font-weight: bold;
+    color: $color-main;
+    border: 0.3rem solid $color-main;
+    transition: all 0.2s;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      outline: none;
+      background-color: #752525;
+      color: $color-white;
+    }
+  }
+}

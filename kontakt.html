@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Veronika</title>
+    <script defer src="script.js"></script>
+    <!-- <script defer src="form.js"></script> -->
+  </head>
+  <body>
+    <div class="burger-links hide">
+      <a href="index.html" class="burger-link">úvod</a>
+      <a href="about.html" class="burger-link">o mně</a>
+      <a href="kontakt.html" class="burger-link">kontakt</a>
+    </div>
+    <section class="kontakt">
+      <nav class="navigation">
+        <a href="index.html"
+          ><img class="navigation__logo" src="ikonky/logo.svg" alt=""
+        /></a>
+        <a href="#" class="burger-menu">
+          <div class="burger-line"></div>
+        </a>
+        <div class="navigation__links">
+          <a
+            href="index.html"
+            onclick="return showPage('uvod', 'omne', 'kontakt');"
+            class="navigation__link"
+            >úvod</a
+          >
+          <a
+            href="about.html"
+            onclick="return showPage('omne', 'uvod', 'kontakt');"
+            class="navigation__link"
+            >o mně</a
+          >
+          <a
+            href="kontakt.html"
+            onclick="return showPage('kontakt', 'omne', 'uvod');"
+            class="navigation__link"
+            >kontakt</a
+          >
+        </div>
+      </nav>
+      <div class="container">
+        <div class="map">
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2608.1357254846375!2d16.618580415019657!3d49.17901107932019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4712950359ec6481%3A0x70dc7d04736ca745!2sKonopn%C3%A1%206%2C%20617%2000%20Brno-jih!5e0!3m2!1sen!2scz!4v1609775952269!5m2!1sen!2scz"
+              width="450"
+              height="250"
+              frameborder="0"
+              style="border: solid 0.3rem #752525"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+        </div>
+        <div class="address">
+          <div class="wrap-address">
+            <img class="geopoint" src="ikonky/adresa.svg" alt="" />
+            <div class="wrap-street">
+              <h4 class="heading">Centrum Jsem krásná</h4>
+              <p class="directions">Konopná 6<br />617 00 Brno-jih</p>
+            </div>
+          </div>
+          <div class="wrap-mail">
+            <img class="envelope" src="ikonky/email.svg" alt="" />
+            <p class="mail">verush.nika@gmail.com</p>
+          </div>
+          <div class="wrap-phone">
+            <img src="ikonky/smartphone.svg" alt="" class="smartphone" />
+            <p class="number">+420 776 020 458</p>
+          </div>
+          <div class="wrap-social">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/veronikakratochvilovaviciart"
+              ><img class="facebook" src="ikonky/facebook.svg" alt=""
+            /></a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/viciart.cz/"
+              ><img class="instagram" src="ikonky/instagram.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <!-- <p class="cta-dotaznik">
+        Pro snadnější komunikaci jsem vytvořila dotazník, kde můžeš vyplnit,
+        jakou změnu ve tvém šatníku či stylu bys ráda viděla či co si pod tím
+        představuješ. Díky němu ti mohu poskytnout služby ušité přímo na míru.
+      </p> -->
+      <!-- <button class="btn-dotaznik btn-form-open">Vyplň dotazník</button> -->
+    </section>
+
+    <!-- <div class="modal hide">
+      <div class="modal-body">
+        <div class="cross">X</div>
+        <h3>Vyberte pohlaví</h3>
+        <div class="genders">
+          <a class="form-link man" href="#">MUŽ</a>
+          <a
+            class="form-link woman"
+            href="https://docs.google.com/forms/d/1pyjbb2Qx4VTVEPfb8-xhY7YqCMaqarYcYdzaWC_ztSQ/viewform?gxids=7628&edit_requested=true"
+            >ŽENA</a
+          >
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>

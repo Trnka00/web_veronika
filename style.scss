@@ -1,0 +1,37 @@
+$color-main: #752525;
+$color-white: #fffaf6;
+$color-white-hover: #fffaf67a;
+@import 'sass/mixins';
+@import 'sass/base';
+@import 'sass/main';
+@import 'sass/about';
+@import 'sass/contact';
+
+.burger-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  padding: 0.5rem;
+  position: absolute;
+  transform: translateX(100%);
+  right: 0;
+  top: 10rem;
+  background-color: $color-main;
+  z-index: 2;
+  height: 30%;
+  border-radius: 0.5rem;
+
+  font-size: 4rem;
+
+  .burger-link {
+    text-decoration: none;
+    color: $color-white;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.hide {
+  display: none;
+}

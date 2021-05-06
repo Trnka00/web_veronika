@@ -1,0 +1,40 @@
+//______________________VARIABLES___________________/
+
+$color-main: #752525;
+$color-white: #fffaf6;
+$color-white-hover: #fffaf67a;
+
+//_____________________mixins_______________________/
+
+//_______________________RESET______________________/
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: 1500px) {
+    font-size: 75%;
+  }
+  @media only screen and (min-width: 1900px) {
+    font-size: 85%;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 40%;
+  }
+}
+body {
+  background-color: $color-white;
+  width: 100vw;
+  overflow-x: hidden;
+}

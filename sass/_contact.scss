@@ -1,0 +1,230 @@
+.kontakt {
+  height: 100%;
+  background-color: $color-white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include navbarStyle();
+
+  .container {
+    display: flex;
+    width: 65%;
+    max-width: 1140px;
+    max-width: 8;
+    justify-content: center;
+
+    margin: 8rem auto 0 auto;
+
+    @media only screen and (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .map {
+      display: flex;
+      justify-content: flex-end;
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+      }
+
+      &-responsive {
+        @media only screen and (max-width: 600px) {
+          text-align: center;
+
+          iframe {
+            width: 90%;
+          }
+        }
+        @media only screen and (min-width: 1500px) {
+          iframe {
+            width: 60rem;
+            height: 25rem;
+          }
+        }
+      }
+    }
+    .address {
+      margin-left: 5rem;
+      @media only screen and (max-width: 1100px) {
+        margin: 4rem 0;
+      }
+      .wrap-address {
+        display: flex;
+        .geopoint {
+          align-self: flex-start;
+          height: 3rem;
+          margin-right: 2rem;
+        }
+        .heading {
+          font-size: 2rem;
+          font-weight: 600;
+          color: $color-main;
+        }
+        .directions {
+          font-size: 1.6rem;
+        }
+      }
+
+      .wrap-mail {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        .envelope {
+          height: 3rem;
+          margin-right: 2rem;
+        }
+        .mail {
+          font-size: 1.6rem;
+        }
+      }
+
+      .wrap-phone {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        .smartphone {
+          height: 3rem;
+          margin-right: 2rem;
+        }
+        .number {
+          font-size: 1.6rem;
+        }
+      }
+      .wrap-social {
+        display: flex;
+        padding-top: 2rem;
+
+        .facebook,
+        .instagram {
+          height: 3rem;
+          overflow: visible;
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  .cta-dotaznik {
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    width: 60%;
+    align-self: center;
+  }
+
+  .cta-question {
+    font-size: 2.2rem;
+    color: $color-main;
+    font-weight: bold;
+    padding-top: 4rem;
+  }
+  .btn-dotaznik {
+    align-self: center;
+    width: 25rem;
+    margin: 2rem 0 8rem 0;
+    font-size: 3rem;
+    background-color: transparent;
+    font-weight: bold;
+    color: $color-main;
+    border: 0.5rem solid $color-main;
+    transition: all 0.2s;
+    &:hover {
+      cursor: pointer;
+      outline: none;
+      background-color: #752525;
+      color: $color-white;
+    }
+  }
+}
+
+.form-open {
+  height: 90vh;
+  width: 90vw;
+  background-color: $color-white;
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  z-index: 2;
+}
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.719);
+  z-index: 1;
+}
+.modal {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &-body {
+    width: 50%;
+    height: 30rem;
+    background-color: wheat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    @media only screen and (max-width: 900px) {
+      width: 80%;
+    }
+
+    .cross {
+      color: $color-main;
+      font-weight: 700;
+      font-size: 2rem;
+      text-align: right;
+      padding: 1rem;
+      width: min-content;
+      float: right;
+      transition: all 0.1s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #915252;
+        color: $color-white;
+      }
+    }
+
+    h3 {
+      text-align: center;
+      color: $color-main;
+      font-size: 3rem;
+      margin-top: 3rem;
+    }
+
+    .genders {
+      display: flex;
+      width: 100%;
+      margin-top: 8rem;
+      justify-content: space-evenly;
+    }
+
+    .form-link {
+      background-color: $color-main;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        background-color: #945252;
+      }
+    }
+  }
+}

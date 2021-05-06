@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Veronika</title>
+  </head>
+  <body>
+    <div class="burger-links">
+      <a href="index.html" class="burger-link">úvod</a>
+      <a href="about.html" class="burger-link">o mně</a>
+      <a href="kontakt.html" class="burger-link">kontakt</a>
+    </div>
+    <section class="uvod">
+      <nav class="navigation">
+        <a href="index.html"
+          ><img class="navigation__logo" src="ikonky/logo.svg" alt=""
+        /></a>
+        <a href="#" class="burger-menu">
+          <div class="burger-line"></div>
+        </a>
+        <div class="navigation__links">
+          <a href="index.html" class="navigation__link">úvod</a>
+          <a href="about.html" class="navigation__link">o mně</a>
+          <a href="kontakt.html" class="navigation__link">kontakt</a>
+        </div>
+      </nav>
+      <div class="text-container">
+        <h1 class="heading">Změna, která ti padne</h1>
+        <p class="info">stylistické módní poradenství</p>
+        <a href="kontakt.html" class="action-btn">Kontaktuj mě</a>
+      </div>
+    </section>
+    <section class="about">
+      <h2 class="citat">
+        "Preferuji uvědomělý přístup k módě, podporuji český design a lokální
+        návrháře."
+      </h2>
+
+      <div class="carousel-container">
+        <button class="btn-car btn-next" id="btn-next">></button>
+        <button class="btn-car btn-previous" id="btn-previous"><</button>
+        <div class="pic-container">
+          <div class="pic red">
+            <p class="car-caption">
+              Pomůžu ti najít styl podle tvých potřeb a preferencí.
+            </p>
+          </div>
+          <div class="pic green">
+            <p class="car-caption">
+              Doprovodím tě při nakupování a ušetřím ti tím čas.
+            </p>
+          </div>
+          <div class="pic blue">
+            <p class="car-caption">
+              Sestavím ti oblečení do práce, pro volý čas i na formální
+              události.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="funguje">Jak to funguje?</h3>
+
+      <div class="roadmap">
+        <div class="form-icon">
+          <img class="icon-roadmap" src="ikonky/1.svg" alt="" />
+
+          <div class="text-wrapper">
+            <h4 class="icon-heading">Vyplníš formulář</h4>
+            <p class="icon-paragraph">
+              K tomu se dostaneš tlačítkem kontaktuj mě
+            </p>
+          </div>
+        </div>
+        <div class="bubble">
+          <img class="icon-roadmap" src="ikonky/2.svg" alt="" />
+          <div class="text-wrapper">
+            <h4 class="icon-heading">Domluvím si s tebou osobní schůzku</h4>
+            <p class="icon-paragraph">
+              Vymyslíme spolu změnu šitou tobě na míru
+            </p>
+          </div>
+        </div>
+        <div class="person">
+          <img class="icon-roadmap" src="ikonky/3.svg" alt="" />
+          <div class="text-wrapper">
+            <h4 class="icon-heading">Probudíme tvé nové já</h4>
+            <p class="icon-paragraph">Užijeme si spolu spoustu zábavy</p>
+          </div>
+        </div>
+      </div>
+      <p class="cta-paragraph">
+        Každému se věnuji individuálně, proto se mi neváhej<br />
+        ozvat a spolu už něco vymyslíme.
+      </p>
+      <p class="cta-question">Máš zájem o konzultaci?</p>
+      <a class="cta-btn" href="kontakt.html">kontaktuj mě</a>
+    </section>
+
+    <form class="hidden form-open" action="">
+      <p>blabla</p>
+    </form>
+    <div class="hidden overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
